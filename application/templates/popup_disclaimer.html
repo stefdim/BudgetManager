@@ -1,0 +1,37 @@
+<!-- Popup Modal for Disclaimer -->
+<div class="modal fade" id="disclaimerModal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="disclaimerLabel">Disclaimer</h5>
+        <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Welcome to the Budget Manager app. This application is a personal project created for learning and individual use. It is not intended for commercial use, and the creator does not guarantee its total security or performance.</p>
+        <p>By using this app, you agree to accept these limitations. If you have any questions or concerns, feel free to contact the creator at <strong>StefanosDim@outlook.com</strong>.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="closePopup">Got it!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Check if the popup has already been shown
+  document.addEventListener('DOMContentLoaded', (event) => {
+    if (!localStorage.getItem('disclaimer_shown')) {
+      // Show the modal
+      var modal = new bootstrap.Modal(document.getElementById('disclaimerModal'), {
+        backdrop: 'static', keyboard: false
+      });
+      modal.show();
+
+      // Mark the disclaimer as shown
+      document.getElementById('closePopup').addEventListener('click', () => {
+        modal.hide();
+        localStorage.setItem('disclaimer_shown', 'true');
+      });
+    }
+  });
+</script>

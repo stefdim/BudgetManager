@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block title %}Budget Manager{% endblock %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero-section d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 100vh; background: linear-gradient(135deg, #1a1a1a, #2e2e2e);">
+    <h1 class="display-4 text-light fw-bold mb-3 animated-text">Welcome to <span class="text-info">Budget Manager</span></h1>
+    <p class="lead text-light mb-4 animated-subtext">
+        Simplify your financial life. Track expenses, plan budgets, and achieve your goals effortlessly.
+    </p>
+    <a href="/dashboard" class="btn btn-info btn-lg px-5 py-3 animated-button">Get Started</a>
+</section>
+
+<style>
+    /* Animation Keyframes */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Hero Text Animations */
+    .animated-text {
+        animation: fadeInUp 1.5s ease-out 0s;
+    }
+    .animated-subtext {
+        animation: fadeInUp 1.5s ease-out 0.5s;
+    }
+    .animated-button {
+        animation: fadeInUp 1.5s ease-out 1s;
+    }
+
+    /* Ensure visibility during animation */
+    .animated-text,
+    .animated-subtext,
+    .animated-button {
+        opacity: 0; /* Start hidden */
+        animation-fill-mode: forwards; /* Retain the final state of the animation */
+    }
+</style>
+
+<section class="features-section container my-5 py-5">
+    <h2 class="text-light fw-bold text-center mb-4">Core Features of BudgetManager</h2>
+    <div class="row g-4">
+        <!-- Feature 1: Expense Tracking -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card bg-dark shadow-lg border-0 p-4 rounded-5 h-100">
+                <h5 class="card-title text-info fw-bold fs-4">Expense Tracking</h5>
+                <p class="card-text text-light fs-5">
+                    Easily track and categorize your expenses. Analyze spending patterns, view transaction history, and gain insights into where your money goes.
+                </p>
+            </div>
+        </div>
+
+        <!-- Feature 2: Budget Planning -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card bg-dark shadow-lg border-0 p-4 rounded-5 h-100">
+                <h5 class="card-title text-info fw-bold fs-4">Budget Planning</h5>
+                <p class="card-text text-light fs-5">
+                    Create and manage personalized budgets based on your income. Set financial goals, monitor your progress, and adjust your spending accordingly.
+                </p>
+            </div>
+        </div>
+
+        <!-- Feature 3: Financial Insights -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card bg-dark shadow-lg border-0 p-4 rounded-5 h-100">
+                <h5 class="card-title text-info fw-bold fs-4">Financial Insights</h5>
+                <p class="card-text text-light fs-5">
+                    Gain actionable insights from your financial data. Visualize trends, discover saving opportunities, and make informed decisions for your future.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Call-to-Action Section -->
+<section class="cta-section d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 100vh; background: linear-gradient(135deg, #333, #444);">
+    <h2 class="text-light fw-bold mb-3">Take Control of Your Finances Today</h2>
+    <p class="fs-5 text-light mb-4">
+        Join thousands of users who are transforming their financial lives with Budget Manager.
+    </p>
+    <a href="/sign-up" class="btn btn-info btn-lg px-5 py-3">Sign Up Now</a>
+</section>
+
+{% endblock %}

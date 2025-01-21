@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Logout - Budget Manager{% endblock %}
+
+{% block content %}
+<!-- Main Container -->
+<div class="container text-center my-5 pt-5">
+
+    <!-- Title -->
+    <h1 class="display-4 text-light fw-bold mb-4">You have been logged out</h1>
+
+    <!-- Subtitle -->
+    <p class="fs-4 text-light mb-4">
+        You have successfully logged out. To access your account again, please log in.
+    </p>
+
+    <!-- Action Buttons -->
+    <div class="d-flex justify-content-center gap-4 mb-5">
+        <a href="/login" class="btn btn-info btn-lg px-5 py-3">Login</a>
+        <a href="/sign-up" class="btn btn-outline-light btn-lg px-5 py-3">Sign Up</a>
+    </div>
+
+</div>
+{% endblock %}

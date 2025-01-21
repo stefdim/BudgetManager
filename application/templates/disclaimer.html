@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}Disclaimer - Budget Manager{% endblock %}
+{% block content %}
+
+<style>
+    /* Disclaimer Section Styling */
+    .disclaimer-section {
+        margin-top: 80px; /* To account for fixed navbar */
+        padding: 15px;
+        background-color: #330b0b;
+    }
+
+    .disclaimer-card {
+        background-color: #1f1f1f;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .disclaimer-card h2 {
+        color: #00a68c;
+        margin-bottom: 15px;
+    }
+
+    .disclaimer-card p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .btn-back {
+        margin-top: 20px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .disclaimer-card {
+            padding: 15px;
+        }
+    }
+</style>
+
+<section class="disclaimer-section container">
+    <div class="disclaimer-card">
+        <h2 class="text-info fw-bold">Disclaimer</h2>
+        <p>Welcome to the Budget Manager app. This application is a personal project created for learning and individual use. It is not intended for commercial use, and the creator does not guarantee its total security or performance.</p>
+        <p>While we strive to ensure a smooth user experience, please note that the application may encounter unexpected issues. The security measures implemented in this app may not meet commercial standards, and there could be risks associated with data handling.</p>
+        <p>By using this app, you agree to accept these limitations. If you have any questions or concerns, feel free to contact the creator at <strong>StefanosDim@outlook.com</strong>.</p>
+        <a href="{{ url_for('views.dashboard') }}" class="btn btn-main btn-action mt-4">Go Back to Dashboard</a>
+    </div>
+</section>
+
+{% endblock %}
