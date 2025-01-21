@@ -1,0 +1,5 @@
+type: python
+name: budget_manager
+build:
+  - pip install -r requirements.txt
+command: python3 main.py
