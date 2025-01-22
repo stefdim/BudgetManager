@@ -71,7 +71,7 @@ SQLAlchemy==1.4.50
 typing_extensions==4.10.0
 #ubuntu-drivers-common==0.0.0
 #ubuntu-pro-client==8001
-ufw==0.36.2
+#ufw==0.36.2
 unattended-upgrades==0.1
 urllib3==2.0.7
 vboxapi==1.0
