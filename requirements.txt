@@ -67,7 +67,7 @@ setuptools==68.1.2
 simplejson==3.19.2
 six==1.16.0
 SQLAlchemy==1.4.50
-systemd-python==235
+#systemd-python==235
 typing_extensions==4.10.0
 ubuntu-drivers-common==0.0.0
 ubuntu-pro-client==8001
