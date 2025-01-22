@@ -21,7 +21,7 @@ Flask==3.0.2
 Flask-Login==0.6.3
 Flask-SQLAlchemy==3.0.3
 greenlet==3.0.3
-gyp==0.1
+#gyp==0.1
 httplib2==0.20.4
 idna==3.6
 itsdangerous==2.1.2
